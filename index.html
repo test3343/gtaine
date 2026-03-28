@@ -1,0 +1,3845 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="dark" lang="uk">
+<head>
+<!-- Head -->
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#642f15" name="theme-color"/>
+<link href="" rel="icon"/>
+<title>GTAINE - Український GTA Role Play</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="public/main/css/bootstrap__q_f4072e3c.css" rel="stylesheet"/>
+<link href="public/main/css/krp-main__q_13ff88d2.css" rel="stylesheet"/>
+<link href="public/main/css/krp-alert__q_f4072e3c.css" rel="stylesheet"/>
+<meta content="79d1c9286e5fc30273ab4e448b3fa59f" name="interkassa-verification"> <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="public/main/css/monitoring.css" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #6c757d;
+            --success: #198754;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #0dcaf0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --dark-blue: #0a1a2a;
+            --darker-blue: #05111d;
+            --ukraine-blue: #0057b7;
+            --ukraine-yellow: #ffd700;
+            --ukraine-gradient: linear-gradient(135deg, var(--ukraine-blue) 0%, var(--ukraine-yellow) 100%);
+        }
+        
+        body {
+            background: radial-gradient(ellipse at bottom, #0a0e17 0%, #000000 100%);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(0,87,183,0.1)" stroke-width="1"/></svg>');
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .navbar {
+            background: rgba(5, 11, 29, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 18% 40%, rgba(0,87,183,0.45) 0%, rgba(0,0,0,0) 65%),
+                radial-gradient(circle at 82% 55%, rgba(255,70,70,0.38) 0%, rgba(0,0,0,0) 60%),
+                linear-gradient(135deg, #020712 0%, #020918 40%, #050d22 100%);
+        }
+        
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-surface {
+            max-width: 690px;
+            padding: 34px 32px 28px;
+            border-radius: 34px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 28px 60px rgba(0,0,0,0.24);
+            backdrop-filter: blur(14px);
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+        }
+
+        .hero-kicker i {
+            color: var(--ukraine-yellow);
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--ukraine-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            text-shadow: 0 5px 15px rgba(0, 87, 183, 0.3);
+            letter-spacing: -1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-ukraine {
+            background: var(--ukraine-gradient);
+            border: none;
+            color: white;
+            font-weight: 700;
+            padding: 15px 35px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0, 87, 183, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-ukraine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--ukraine-yellow) 0%, var(--ukraine-blue) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn-ukraine:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 87, 183, 0.7);
+            color: white;
+        }
+        
+        .btn-ukraine:hover::before {
+            opacity: 1;
+        }
+
+        .btn-hero-primary,
+        .btn-download-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 58px;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-hero-primary {
+            padding-inline: 34px;
+        }
+
+        .btn-download-main {
+            width: 100%;
+            padding: 16px 26px;
+            border-radius: 18px;
+            box-shadow: 0 14px 30px rgba(0, 87, 183, 0.35);
+        }
+
+        .btn-download-main i {
+            font-size: 1.15rem;
+        }
+
+        .btn-ghost-panel {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 58px;
+            padding: 15px 30px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.04);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
+
+        .btn-ghost-panel:hover {
+            color: #fff;
+            transform: translateY(-4px);
+            border-color: rgba(255, 215, 0, 0.35);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .download-helper {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 215, 0, 0.16);
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .brand-mark {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,87,183,0.95), rgba(255,215,0,0.95));
+            color: #08111f;
+            font-weight: 900;
+            box-shadow: 0 12px 24px rgba(0, 87, 183, 0.28);
+        }
+
+        .brand-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-copy strong {
+            font-size: 1rem;
+            letter-spacing: 0.14em;
+        }
+
+        .brand-copy span {
+            font-size: 0.72rem;
+            letter-spacing: 0.22em;
+            color: rgba(255,255,255,0.62);
+            margin-top: 6px;
+            text-transform: uppercase;
+        }
+
+        .brand-logo {
+            height: 82px;
+            width: auto;
+            filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+        }
+
+        .footer-logo {
+            height: 72px;
+            width: auto;
+            filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+        }
+
+        .hero-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.82);
+            font-size: 0.92rem;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-badge i {
+            color: var(--ukraine-yellow);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .hero-note {
+            max-width: 560px;
+            padding: 16px 18px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.76);
+            line-height: 1.65;
+            box-shadow: 0 16px 28px rgba(0,0,0,0.14);
+        }
+
+        .hero-note strong {
+            color: white;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 760px;
+        }
+
+        .hero-stat {
+            padding: 18px 18px 16px;
+            border-radius: 22px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 1.55rem;
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        .hero-stat span {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .hero-visual-wrap {
+            position: relative;
+        }
+
+        .hero-side-card {
+            position: absolute;
+            right: -24px;
+            top: 12%;
+            width: 220px;
+            padding: 18px;
+            border-radius: 24px;
+            background: rgba(4, 14, 28, 0.82);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.28);
+        }
+
+        .hero-side-card .label {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 10px;
+        }
+
+        .hero-side-card strong {
+            display: block;
+            font-size: 2.1rem;
+            color: var(--ukraine-yellow);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .hero-side-card p {
+            margin: 0;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        .section-shell {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-shell::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, rgba(0,87,183,0.14), transparent 26%),
+                radial-gradient(circle at bottom right, rgba(255,215,0,0.08), transparent 26%);
+            pointer-events: none;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 54px;
+            text-align: center;
+            color: rgba(255,255,255,0.72);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .server-grid,
+        .newbie-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .server-card,
+        .newbie-card {
+            position: relative;
+            padding: 26px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            overflow: hidden;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .server-card:hover,
+        .newbie-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 26px 46px rgba(0,0,0,0.24);
+            border-color: rgba(255,215,0,0.18);
+        }
+
+        .server-card::before,
+        .newbie-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(255,215,0,0.1), transparent 34%);
+            pointer-events: none;
+        }
+
+        .server-topline,
+        .newbie-topline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.78);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .server-card h3,
+        .newbie-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .server-card p,
+        .newbie-card p {
+            color: rgba(255,255,255,0.72);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .server-meta,
+        .newbie-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .server-meta span,
+        .newbie-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.86rem;
+        }
+
+        .server-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 22px;
+        }
+
+        .server-showcase {
+            position: relative;
+            padding: 30px;
+            border-radius: 32px;
+            background:
+                radial-gradient(circle at top right, rgba(255,215,0,0.14), transparent 30%),
+                radial-gradient(circle at bottom left, rgba(0,87,183,0.18), transparent 34%),
+                linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 26px 50px rgba(0,0,0,0.22);
+            overflow: hidden;
+        }
+
+        .server-showcase::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 35%);
+            pointer-events: none;
+        }
+
+        .server-showcase-topline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            padding: 9px 13px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .server-showcase h3 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+
+        .server-showcase p {
+            max-width: 640px;
+            color: rgba(255,255,255,0.72);
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
+
+        .server-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .server-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.82);
+            font-size: 0.9rem;
+        }
+
+        .news-card .news-link {
+            position: relative;
+        }
+
+        .news-card .news-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 1px;
+            background: rgba(255,215,0,0.35);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.28s ease;
+        }
+
+        .news-card:hover .news-link::after {
+            transform: scaleX(1);
+        }
+
+        .start-card {
+            padding-top: 44px;
+        }
+
+        .start-card-premium {
+            background:
+                radial-gradient(circle at top left, rgba(0,87,183,0.2), transparent 42%),
+                radial-gradient(circle at bottom right, rgba(255,215,0,0.09), transparent 35%),
+                linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 22px 40px rgba(0,0,0,0.22);
+            overflow: hidden;
+        }
+
+        .start-card-premium::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent 35%);
+            pointer-events: none;
+        }
+
+        .step-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.82);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .step-label-min {
+            background: rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.72);
+            font-size: 0.74rem;
+            letter-spacing: 0.1em;
+        }
+
+        .step-label i {
+            color: var(--ukraine-yellow);
+        }
+
+        .step-title {
+            text-align: left;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .step-text {
+            text-align: left;
+            color: rgba(255,255,255,0.74);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .step-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .step-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.86rem;
+        }
+
+        .step-action {
+            margin-top: auto;
+        }
+
+        .step-action .btn {
+            justify-content: center;
+        }
+
+        .btn-step-primary,
+        .btn-step-secondary {
+            min-height: 60px;
+            border-radius: 18px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-step-primary {
+            background: linear-gradient(135deg, #0d65d9 0%, #2b83e8 55%, #ffd700 100%);
+            box-shadow: 0 18px 34px rgba(13, 101, 217, 0.35);
+            color: white;
+        }
+
+        .btn-step-primary:hover {
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 24px 40px rgba(13, 101, 217, 0.44);
+        }
+
+        .btn-step-secondary {
+            background: rgba(255,255,255,0.05);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 16px 30px rgba(0,0,0,0.18);
+        }
+
+        .btn-step-secondary:hover {
+            color: white;
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,215,0,0.22);
+        }
+
+        .start-icon {
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 20px;
+            border-radius: 24px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(0,87,183,0.24), rgba(255,215,0,0.2));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+
+        .start-card .feature-number {
+            top: 18px;
+            right: 22px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 24px 0 28px;
+        }
+
+        .info-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 14px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.78);
+            font-size: 0.9rem;
+        }
+
+        .info-pill i {
+            color: var(--ukraine-yellow);
+        }
+
+        .media-frame {
+            position: relative;
+            padding: 16px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.28);
+        }
+
+        .media-frame::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+            pointer-events: none;
+        }
+
+        .news-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.45s ease;
+            height: 100%;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 18px 34px rgba(0,0,0,0.2);
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 44px rgba(0,0,0,0.3);
+        }
+
+        .news-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.08);
+        }
+
+        .news-content {
+            padding: 24px;
+        }
+
+        .news-title {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 10px 0 12px;
+        }
+
+        .news-text {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--ukraine-yellow);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .site-footer {
+            position: relative;
+            padding: 34px 0 10px;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+        }
+
+        .footer-brandline {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .footer-payments img {
+            height: 28px;
+            opacity: 0.84;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .footer-payments img:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 35px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--ukraine-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .feature-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--ukraine-blue) 0%, var(--ukraine-yellow) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.1;
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background: var(--ukraine-gradient);
+            border-radius: 3px;
+            box-shadow: 0 3px 10px rgba(0, 87, 183, 0.5);
+        }
+        
+        .monitoring-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .monitoring-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,87,183,0.1) 0%, rgba(255,215,0,0.05) 100%);
+            z-index: -1;
+        }
+        
+        .monitoring-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .rank-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--ukraine-yellow);
+            margin-right: 20px;
+            text-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+        }
+        
+        .region-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            flex-grow: 1;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--ukraine-gradient);
+            border-radius: 5px;
+            transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            animation: shine 2s infinite;
+        }
+        
+        .green-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #00ff00;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #00ff00;
+            animation: pulse 2s infinite;
+        }
+        
+        .online-count {
+            font-weight: 700;
+            margin-left: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .social-icon {
+            font-size: 1.8rem;
+            color: white;
+            transition: all 0.4s ease;
+            margin-right: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.3) rotate(10deg);
+            color: var(--ukraine-yellow);
+            text-shadow: 0 0 15px var(--ukraine-yellow);
+        }
+        
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 25px 40px rgba(0, 87, 183, 0.5));
+            animation: float 8s ease-in-out infinite;
+            transform-origin: center bottom;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-30px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(-2deg); }
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.8; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.8; transform: scale(0.95); }
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+        }
+        
+        .screenshot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,87,183,0.1) 0%, rgba(255,215,0,0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 20px 50px rgba(0, 87, 183, 0.5);
+            z-index: 10;
+        }
+        
+        .screenshot:hover::after {
+            opacity: 1;
+        }
+        
+        .news-card {
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            height: 100%;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--ukraine-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0, 87, 183, 0.4);
+        }
+        
+        .news-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .news-date {
+            font-size: 0.9rem;
+            color: var(--ukraine-yellow);
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: rgba(5, 11, 29, 0.98);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--ukraine-gradient);
+        }
+        
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        /* Нові анімації */
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0.7;
+            }
+        }
+        
+        .flicker-animation {
+            animation: flicker 8s infinite;
+        }
+        
+        @keyframes borderGlow {
+            0% { box-shadow: 0 0 10px rgba(0, 87, 183, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(0, 87, 183, 0.8), 0 0 30px rgba(255, 215, 0, 0.4); }
+            100% { box-shadow: 0 0 10px rgba(0, 87, 183, 0.5); }
+        }
+        
+        .glow-animation {
+            animation: borderGlow 4s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-badge-row,
+            .hero-actions,
+            .pill-row {
+                gap: 10px;
+            }
+
+            .brand-logo {
+                height: 62px;
+            }
+
+            .footer-logo {
+                height: 56px;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-side-card {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+
+            .step-title,
+            .step-text {
+                text-align: center;
+            }
+
+            .step-label,
+            .step-meta {
+                justify-content: center;
+            }
+
+            .server-grid,
+            .newbie-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .server-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-side-card {
+                right: 0;
+                top: auto;
+                bottom: -10px;
+            }
+        }
+    </style>
+<style>
+        :root {
+            --neo-bg: #06080c;
+            --neo-surface: rgba(255, 255, 255, 0.035);
+            --neo-surface-strong: rgba(255, 255, 255, 0.055);
+            --neo-line: rgba(255, 255, 255, 0.065);
+            --neo-text: rgba(245, 248, 252, 0.94);
+            --neo-text-soft: rgba(228, 234, 242, 0.68);
+            --neo-gold: #c6a468;
+            --neo-blue: #b6d7ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif !important;
+            color: var(--neo-text);
+            background:
+                radial-gradient(circle at 14% 12%, rgba(182, 215, 255, 0.06), transparent 18%),
+                radial-gradient(circle at 86% 10%, rgba(198, 164, 104, 0.08), transparent 18%),
+                linear-gradient(180deg, #05070a 0%, #090c11 42%, #05070a 100%) !important;
+        }
+
+        body::before {
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px) !important;
+            background-size: 64px 64px !important;
+            opacity: 0.16 !important;
+        }
+
+        h1, h2, h3, h4, h5, .section-title, .hero-title, .server-showcase h3, .news-title {
+            font-family: 'Syne', sans-serif !important;
+        }
+
+        .navbar {
+            top: 14px;
+            left: 0;
+            right: 0;
+            width: calc(100% - 28px);
+            max-width: 1360px;
+            margin: 0 auto;
+            border-radius: 26px;
+            background: rgba(10, 13, 18, 0.62) !important;
+            border: 1px solid rgba(255, 255, 255, 0.06) !important;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24) !important;
+        }
+
+        .navbar .container {
+            min-height: 96px;
+        }
+
+        .brand-logo {
+            height: 88px;
+            filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.28));
+        }
+
+        .brand-copy strong {
+            font-size: 1.06rem;
+            letter-spacing: 0.18em;
+        }
+
+        .brand-copy span {
+            color: rgba(255, 255, 255, 0.52);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.78) !important;
+            font-size: 0.84rem !important;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link::after {
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), var(--neo-gold)) !important;
+            height: 1px !important;
+        }
+
+        .nav-cta,
+        .nav-cta-secondary {
+            min-width: 132px;
+        }
+
+        .hero-section {
+            padding-top: 130px;
+            min-height: 108vh;
+            background:
+                radial-gradient(circle at 18% 18%, rgba(182, 215, 255, 0.08), transparent 20%),
+                radial-gradient(circle at 80% 14%, rgba(198, 164, 104, 0.09), transparent 18%),
+                linear-gradient(180deg, #06080c 0%, #0b0f14 58%, #06080c 100%) !important;
+        }
+
+        .hero-surface {
+            max-width: 760px;
+            padding: 42px 38px 34px;
+            border-radius: 42px;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018)) !important;
+            border: 1px solid var(--neo-line) !important;
+            box-shadow: 0 34px 84px rgba(0,0,0,0.28) !important;
+        }
+
+        .hero-kicker {
+            font-size: 0.74rem;
+            letter-spacing: 0.24em;
+            background: rgba(255,255,255,0.035) !important;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 6.2vw, 6.3rem) !important;
+            line-height: 0.96 !important;
+            letter-spacing: -0.05em !important;
+        }
+
+        .hero-title span,
+        .section-title span,
+        .text-underline {
+            background: linear-gradient(135deg, #ffffff 0%, var(--neo-blue) 60%, var(--neo-gold) 100%) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .hero-subtitle {
+            font-size: 1.06rem !important;
+            color: var(--neo-text-soft) !important;
+            line-height: 1.9 !important;
+        }
+
+        .hero-actions {
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+        .btn-ukraine,
+        .btn-step-primary,
+        .btn-step-secondary,
+        .btn-ghost-panel,
+        .btn-warning,
+        .btn-outline-warning,
+        .btn-outline-danger,
+        .btn-outline-success,
+        .server-link-btn {
+            min-height: 58px;
+            border-radius: 22px !important;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-ukraine,
+        .btn-step-primary,
+        .btn-warning {
+            background: linear-gradient(135deg, #f4f6f8 0%, #d9e1e7 60%, var(--neo-gold) 100%) !important;
+            color: #0b1016 !important;
+            box-shadow: 0 18px 32px rgba(0,0,0,0.16) !important;
+        }
+
+        .btn-ghost-panel,
+        .btn-step-secondary,
+        .btn-outline-warning,
+        .btn-outline-danger,
+        .btn-outline-success {
+            background: rgba(255,255,255,0.038) !important;
+            border: 1px solid rgba(255,255,255,0.09) !important;
+            color: #fff !important;
+        }
+
+        .hero-note,
+        .monitoring-card,
+        .feature-card,
+        .server-showcase,
+        .server-card,
+        .newbie-card,
+        .news-card,
+        .media-frame,
+        .site-footer .container {
+            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.017)) !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            box-shadow: 0 24px 56px rgba(0,0,0,0.2) !important;
+        }
+
+        .hero-note {
+            padding: 20px 22px 20px 24px !important;
+            border-left: 1px solid rgba(198,164,104,0.45) !important;
+            color: var(--neo-text-soft) !important;
+        }
+
+        .server-badges span,
+        .server-meta span,
+        .newbie-meta span,
+        .step-meta span,
+        .step-label,
+        .step-label-min,
+        .info-pill,
+        .server-topline,
+        .newbie-topline,
+        .server-showcase-topline {
+            background: rgba(255,255,255,0.036) !important;
+            border: 1px solid rgba(255,255,255,0.06) !important;
+            color: rgba(255,255,255,0.76) !important;
+        }
+
+        .section-shell::before {
+            background:
+                radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 18%),
+                radial-gradient(circle at bottom right, rgba(198,164,104,0.06), transparent 20%) !important;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 4vw, 4rem) !important;
+            letter-spacing: -0.04em;
+        }
+
+        .section-intro {
+            max-width: 720px;
+            color: rgba(255,255,255,0.62) !important;
+            line-height: 1.88 !important;
+        }
+
+        .feature-card,
+        .server-card,
+        .newbie-card,
+        .news-card {
+            border-radius: 30px !important;
+            padding: 30px;
+        }
+
+        .feature-card:hover,
+        .server-card:hover,
+        .newbie-card:hover,
+        .news-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 28px 62px rgba(0,0,0,0.24) !important;
+            border-color: rgba(198,164,104,0.16) !important;
+        }
+
+        .feature-number {
+            opacity: 0.08 !important;
+        }
+
+        .news-content,
+        .server-card,
+        .newbie-card {
+            color: var(--neo-text-soft);
+        }
+
+        .news-link {
+            color: #f5efe2 !important;
+        }
+
+        .media-frame {
+            border-radius: 34px !important;
+            padding: 18px;
+        }
+
+        .carousel-inner {
+            border-radius: 26px !important;
+        }
+
+        .footer-logo {
+            height: 78px;
+        }
+
+        .site-footer {
+            padding-top: 46px;
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                width: calc(100% - 16px);
+                top: 8px;
+            }
+
+            .hero-surface {
+                padding: 28px 24px 24px;
+                border-radius: 28px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.8rem, 11vw, 4rem) !important;
+            }
+
+            .brand-logo {
+                height: 64px;
+            }
+        }
+</style>
+<style>
+  :root {
+    --lux-bg: #04070d;
+    --lux-panel: rgba(10, 18, 30, 0.74);
+    --lux-panel-strong: rgba(12, 21, 36, 0.88);
+    --lux-stroke: rgba(255, 255, 255, 0.1);
+    --lux-text-soft: rgba(233, 240, 248, 0.72);
+    --lux-gold: #d8c09a;
+    --lux-ice: #eef6ff;
+    --lux-blue: #6bb8ff;
+  }
+
+  @keyframes ambientFloatOne {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(18px, -24px, 0) scale(1.08); }
+  }
+
+  @keyframes ambientFloatTwo {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(-20px, 26px, 0) scale(1.12); }
+  }
+
+  @keyframes ambientFloatThree {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(12px, 18px, 0) scale(1.06); }
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 14% 16%, rgba(107, 184, 255, 0.12), transparent 24%),
+      radial-gradient(circle at 86% 12%, rgba(216, 192, 154, 0.11), transparent 20%),
+      radial-gradient(circle at 50% 120%, rgba(70, 106, 156, 0.22), transparent 44%),
+      linear-gradient(180deg, #03060b 0%, #060b12 42%, #05080f 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.04), transparent 34%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 22%);
+    mix-blend-mode: screen;
+    opacity: 0.75;
+    z-index: 0;
+  }
+
+  .ambient-orb {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(24px);
+    opacity: 0.55;
+    z-index: 0;
+  }
+
+  .ambient-orb-1 {
+    top: 90px;
+    left: -90px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(107, 184, 255, 0.42), transparent 70%);
+    animation: ambientFloatOne 16s ease-in-out infinite;
+  }
+
+  .ambient-orb-2 {
+    top: 35%;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(216, 192, 154, 0.28), transparent 72%);
+    animation: ambientFloatTwo 18s ease-in-out infinite;
+  }
+
+  .ambient-orb-3 {
+    bottom: -110px;
+    left: 26%;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(122, 156, 255, 0.18), transparent 72%);
+    animation: ambientFloatThree 20s ease-in-out infinite;
+  }
+
+  .navbar,
+  .hero-surface,
+  .monitoring-card,
+  .feature-card,
+  .server-showcase,
+  .server-card,
+  .start-card-premium,
+  .news-card,
+  .site-footer .container,
+  .modal-content {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)) padding-box, linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03)) border-box !important;
+    border: 1px solid transparent !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px) saturate(140%);
+  }
+
+  .hero-surface,
+  .server-showcase,
+  .monitoring-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-surface::after,
+  .server-showcase::after,
+  .monitoring-card::after,
+  .news-card::after,
+  .feature-card::after,
+  .server-card::after,
+  .start-card-premium::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.14), transparent 26%, transparent 70%, rgba(255,255,255,0.06));
+    opacity: 0.6;
+  }
+
+  .hero-title,
+  .section-title,
+  .server-showcase h3,
+  .news-title,
+  .step-title {
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  .hero-title {
+    font-size: clamp(3.4rem, 6vw, 5.9rem) !important;
+    line-height: 0.94;
+  }
+
+  .hero-subtitle,
+  .section-intro,
+  .feature-card p,
+  .server-card p,
+  .server-showcase p,
+  .step-text,
+  .hero-note {
+    color: var(--lux-text-soft) !important;
+  }
+
+  .hero-note {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 16px 18px;
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .btn-step-secondary,
+  .btn-warning,
+  .btn-ghost-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px !important;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .btn-warning {
+    background: linear-gradient(135deg, #f7fbff 0%, #ccdced 34%, #d7bd95 100%) !important;
+    color: #08111d !important;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255,255,255,0.22) inset !important;
+  }
+
+  .btn-ghost-panel,
+  .btn-step-secondary {
+    background: rgba(255, 255, 255, 0.045) !important;
+    color: #f5f8fc !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24) !important;
+  }
+
+  .btn-ukraine::before,
+  .btn-step-primary::before,
+  .btn-warning::before,
+  .btn-ghost-panel::before,
+  .btn-step-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 18%, rgba(255,255,255,0.34) 48%, transparent 82%);
+    transform: translateX(-120%);
+    transition: transform 0.9s ease;
+    pointer-events: none;
+  }
+
+  .btn-ukraine:hover::before,
+  .btn-step-primary:hover::before,
+  .btn-warning:hover::before,
+  .btn-ghost-panel:hover::before,
+  .btn-step-secondary:hover::before {
+    transform: translateX(120%);
+  }
+
+  .btn-ukraine:hover,
+  .btn-step-primary:hover,
+  .btn-step-secondary:hover,
+  .btn-warning:hover,
+  .btn-ghost-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.34) !important;
+  }
+
+  .feature-card,
+  .server-card,
+  .start-card-premium,
+  .news-card {
+    transform: translateY(0);
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+  }
+
+  .feature-card:hover,
+  .server-card:hover,
+  .start-card-premium:hover,
+  .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 34px 86px rgba(0, 0, 0, 0.36), 0 0 0 1px rgba(255,255,255,0.08) inset !important;
+  }
+
+  .feature-card img,
+  .news-image img,
+  .character-image {
+    transition: transform 0.7s ease, filter 0.7s ease;
+    filter: saturate(1.02) contrast(1.04);
+  }
+
+  .feature-card:hover img,
+  .news-card:hover .news-image img,
+  .hero-visual-wrap:hover .character-image {
+    transform: scale(1.035);
+    filter: saturate(1.08) contrast(1.08);
+  }
+
+  .section-shell::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .server-badges span,
+  .step-meta span,
+  .server-meta span {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #f3f6fb !important;
+  }
+
+  .site-footer::before {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 992px) {
+    .ambient-orb-1 { width: 180px; height: 180px; }
+    .ambient-orb-2 { width: 220px; height: 220px; }
+    .ambient-orb-3 { width: 240px; height: 240px; left: 10%; }
+    .hero-title { font-size: clamp(2.8rem, 12vw, 4.5rem) !important; }
+  }
+</style>
+</link></meta></head>
+<body>
+<div class="ambient-orb ambient-orb-1"></div>
+<div class="ambient-orb ambient-orb-2"></div>
+<div class="ambient-orb ambient-orb-3"></div>
+<!-- Анімований фон з частинками -->
+<div class="floating-particles" id="particles-js"></div>
+<!-- Додатковий градієнтний оверлей -->
+<div class="position-absolute w-100 h-100" style="background: radial-gradient(ellipse at center, rgba(0,87,183,0.1) 0%, rgba(0,0,0,0) 70%); z-index: 0; pointer-events: none;"></div>
+<!-- Header -->
+<style>
+  .navbar-dark {
+    background: linear-gradient(180deg, rgba(3, 9, 18, 0.96), rgba(5, 12, 26, 0.9)) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+  }
+
+  .navbar .container {
+    min-height: 88px;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.86rem;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    padding: 0.85rem 1rem !important;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #007bff, #ffd700);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 80%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+    transform: translateY(-1px);
+  }
+
+  .btn-warning {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    border: none;
+    color: #000;
+    font-size: 0.82rem;
+    border-radius: 16px;
+    padding: 0.8rem 1.18rem;
+    box-shadow: 0 16px 30px rgba(255, 183, 0, 0.22);
+  }
+
+  .btn-outline-warning {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-color: rgba(255, 215, 0, 0.55);
+    color: #fff;
+    font-size: 0.82rem;
+    border-radius: 16px;
+    padding: 0.8rem 1.18rem;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+  }
+
+  .btn-outline-warning:hover {
+    background-color: #ffd700;
+    color: #000;
+  }
+
+  .nav-cta {
+    min-width: 124px;
+  }
+
+  .nav-cta-secondary {
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: #000;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 0.4rem 0.8rem;
+    }
+  }
+
+  /* Активна мова у випадаючому меню */
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: #ffd700 !important;
+    color: #000 !important;
+    font-weight: 600;
+  }
+
+  #langDropdown {
+    min-width: 164px;
+    justify-content: center;
+    padding: 0.7rem 1rem !important;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+  }
+
+  #langDropdown:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  #langDropdown img {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
+  }
+
+  #langLabel {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  #langMenu {
+    min-width: 220px;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(8, 16, 28, 0.97), rgba(10, 18, 30, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(18px);
+  }
+
+  #langMenu .language-selector {
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    color: #f4f7fb;
+    font-weight: 600;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    border: 1px solid transparent;
+  }
+
+  #langMenu .language-selector:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  #langMenu .language-selector.active {
+    background: linear-gradient(135deg, rgba(247, 251, 255, 0.96), rgba(215, 189, 149, 0.94)) !important;
+    color: #08111d !important;
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+  }
+
+  #langMenu .language-selector img {
+    width: 22px;
+    height: 16px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .system-modal .modal-content {
+    background: linear-gradient(180deg, rgba(7, 12, 20, 0.96), rgba(10, 17, 28, 0.92));
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+  }
+
+  .system-modal .modal-header,
+  .system-modal .modal-footer {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .requirements-hero {
+    padding: 1.35rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at top left, rgba(107, 184, 255, 0.18), transparent 38%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1.25rem;
+  }
+
+  .requirements-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #f7fafc;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.85rem;
+  }
+
+  .requirements-copy {
+    color: rgba(233, 240, 248, 0.72);
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  .requirements-card {
+    height: 100%;
+    padding: 1.25rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  .requirements-card h6 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .requirements-list li {
+    color: rgba(241, 246, 252, 0.86);
+    padding: 0.42rem 0;
+  }
+
+  .requirements-cta {
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 24px;
+    background:
+      linear-gradient(135deg, rgba(247, 251, 255, 0.08), rgba(215, 189, 149, 0.08)),
+      rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .requirements-cta-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 0.45rem;
+  }
+
+  .requirements-cta-copy {
+    color: rgba(233, 240, 248, 0.72);
+    margin-bottom: 1rem;
+  }
+
+  .requirements-cta .btn {
+    min-height: 58px;
+    border-radius: 18px;
+  }
+
+  .requirements-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  @media (max-width: 767px) {
+    .requirements-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Discord / Wiki Modal стиль */
+  #discordWikiModal .modal-content {
+    background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.2), transparent),
+                radial-gradient(circle at bottom right, rgba(255, 215, 0, 0.15), #000);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+  }
+
+  #discordWikiModal .btn-warning {
+    background: linear-gradient(90deg, #ffd700, #ffb700);
+    border: none;
+  }
+
+  #discordWikiModal .btn-warning:hover {
+    filter: brightness(1.1);
+  }
+</style>
+<style>
+  :root {
+    --accent-ice: #d6e6f5;
+    --accent-gold-soft: #c8a96b;
+    --surface-1: rgba(10, 14, 20, 0.9);
+    --surface-2: rgba(16, 21, 28, 0.82);
+    --surface-line: rgba(255, 255, 255, 0.06);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 18% 20%, rgba(255,255,255,0.05), transparent 18%),
+      radial-gradient(circle at 82% 16%, rgba(200,169,107,0.08), transparent 16%),
+      linear-gradient(180deg, #06080c 0%, #0a0d12 46%, #05070a 100%);
+  }
+
+  body::before {
+    opacity: 0.03;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(255,255,255,0.05), transparent 20%),
+      radial-gradient(circle at 80% 0%, rgba(200,169,107,0.06), transparent 18%),
+      linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0));
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .navbar {
+    background: rgba(7, 13, 24, 0.72) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(22px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-section {
+    background:
+      radial-gradient(circle at 18% 24%, rgba(255,255,255,0.06), transparent 24%),
+      radial-gradient(circle at 78% 18%, rgba(200,169,107,0.08), transparent 18%),
+      linear-gradient(135deg, #07090d 0%, #0b1016 40%, #06080b 100%);
+  }
+
+  .hero-surface,
+  .monitoring-card,
+  .feature-card,
+  .server-showcase,
+  .server-card,
+  .newbie-card,
+  .media-frame,
+  .news-card,
+  .site-footer .container,
+  .hero-note {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018)) !important;
+    border: 1px solid var(--surface-line) !important;
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(14px);
+  }
+
+  .hero-surface {
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-surface::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.08), transparent 26%),
+      radial-gradient(circle at top right, rgba(200,169,107,0.08), transparent 24%);
+    pointer-events: none;
+  }
+
+  .hero-kicker,
+  .step-label,
+  .server-topline,
+  .newbie-topline,
+  .server-showcase-topline,
+  .hero-badge,
+  .info-pill,
+  .server-meta span,
+  .newbie-meta span,
+  .step-meta span,
+  .server-badges span {
+    background: rgba(255, 255, 255, 0.045) !important;
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+  }
+
+  .hero-title,
+  .section-title,
+  .server-showcase h3 {
+    letter-spacing: -0.03em;
+  }
+
+  .hero-title {
+    font-size: clamp(3.6rem, 5vw, 5.4rem);
+    line-height: 1.02;
+    margin-bottom: 22px !important;
+  }
+
+  .hero-subtitle {
+    max-width: 580px;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.76);
+  }
+
+  .hero-kicker {
+    letter-spacing: 0.22em;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.72);
+    border-color: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.035);
+  }
+
+  .hero-note {
+    border-left: 2px solid rgba(200,169,107,0.55) !important;
+    border-radius: 24px !important;
+    padding: 18px 20px 18px 22px !important;
+  }
+
+  .text-underline,
+  .hero-title span,
+  .section-title span {
+    background: linear-gradient(135deg, #f4f7fa 0%, var(--accent-ice) 55%, var(--accent-gold-soft) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .server-copy-btn,
+  .btn-warning {
+    background: linear-gradient(135deg, #eceff3 0%, #d9e2ea 60%, #c8a96b 100%) !important;
+    color: #0a1016 !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  .btn-ghost-panel,
+  .btn-step-secondary,
+  .server-link-btn,
+  .btn-outline-warning {
+    background: rgba(255,255,255,0.045) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: #fff !important;
+  }
+
+  .btn-ukraine:hover,
+  .btn-step-primary:hover,
+  .btn-step-secondary:hover,
+  .btn-ghost-panel:hover,
+  .server-link-btn:hover,
+  .btn-warning:hover,
+  .btn-outline-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .btn-step-secondary,
+  .btn-ghost-panel,
+  .server-link-btn,
+  .btn-warning,
+  .btn-outline-warning {
+    min-height: 60px;
+    border-radius: 20px !important;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .feature-card::after,
+  .news-card::before,
+  .section-title:after {
+    background: linear-gradient(90deg, rgba(255,255,255,0.82), #c8a96b) !important;
+  }
+
+  .section-title {
+    margin-bottom: 1.4rem !important;
+  }
+
+  .section-intro {
+    max-width: 760px;
+    color: rgba(255,255,255,0.66);
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .progress-bar-fill {
+    background: linear-gradient(90deg, #dfe6ee, #c8a96b) !important;
+  }
+
+  .character-image {
+    filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.22));
+  }
+
+  .news-image img,
+  .carousel-item img,
+  .feature-card img {
+    filter: saturate(0.92) contrast(1.02);
+  }
+
+  .feature-card,
+  .server-card,
+  .newbie-card,
+  .news-card {
+    transition: transform 0.38s ease, box-shadow 0.38s ease, border-color 0.38s ease, background 0.38s ease !important;
+  }
+
+  .feature-card:hover,
+  .server-card:hover,
+  .newbie-card:hover,
+  .news-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 26px 56px rgba(0,0,0,0.24) !important;
+    border-color: rgba(200,169,107,0.2) !important;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.024)) !important;
+  }
+
+  .server-showcase {
+    border-radius: 38px !important;
+  }
+
+  .server-showcase h3 {
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    margin-bottom: 16px;
+  }
+
+  .server-showcase p {
+    max-width: 720px;
+  }
+
+  .footer-brandline,
+  .navbar-brand {
+    position: relative;
+  }
+
+  .footer-brandline::after,
+  .navbar-brand::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 -10px 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(200,169,107,0.45), rgba(255,255,255,0));
+    opacity: 0.3;
+  }
+
+  @media (max-width: 768px) {
+    .hero-surface,
+    .feature-card,
+    .server-showcase,
+    .server-card,
+    .newbie-card,
+    .news-card {
+      border-radius: 26px !important;
+    }
+  }
+</style>
+<style>
+  .hero-section::before,
+  .section-shell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hero-section::before {
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.018), transparent 18%, transparent 82%, rgba(255,255,255,0.015)),
+      radial-gradient(circle at 72% 24%, rgba(255,255,255,0.055), transparent 18%);
+    opacity: 0.9;
+  }
+
+  .section-shell::after {
+    background: linear-gradient(180deg, rgba(255,255,255,0.014), transparent 16%, transparent 84%, rgba(255,255,255,0.01));
+  }
+
+  .hero-surface,
+  .server-showcase {
+    overflow: hidden;
+  }
+
+  .hero-surface::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+
+  .hero-title {
+    text-wrap: balance;
+  }
+
+  .hero-subtitle,
+  .section-intro,
+  .hero-note,
+  .feature-card p,
+  .server-card p,
+  .newbie-card p,
+  .news-text {
+    text-wrap: pretty;
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .btn-step-secondary,
+  .btn-ghost-panel,
+  .btn-warning,
+  .btn-outline-warning,
+  .btn-outline-danger,
+  .btn-outline-success {
+    box-shadow:
+      0 16px 34px rgba(0,0,0,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.12) !important;
+  }
+
+  .btn-ukraine::after,
+  .btn-step-primary::after,
+  .btn-step-secondary::after,
+  .btn-ghost-panel::after,
+  .btn-warning::after,
+  .btn-outline-warning::after,
+  .btn-outline-danger::after,
+  .btn-outline-success::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 24%, rgba(255,255,255,0.18) 50%, transparent 76%);
+    transform: translateX(-120%);
+    transition: transform 0.8s ease;
+    pointer-events: none;
+  }
+
+  .btn-ukraine:hover::after,
+  .btn-step-primary:hover::after,
+  .btn-step-secondary:hover::after,
+  .btn-ghost-panel:hover::after,
+  .btn-warning:hover::after,
+  .btn-outline-warning:hover::after,
+  .btn-outline-danger:hover::after,
+  .btn-outline-success:hover::after {
+    transform: translateX(120%);
+  }
+
+  .character-image,
+  .news-image img,
+  .carousel-item img {
+    transition: transform 0.85s ease, filter 0.85s ease;
+  }
+
+  .hero-visual-wrap:hover .character-image {
+    transform: translateY(-10px) scale(1.02);
+    filter: drop-shadow(0 32px 50px rgba(0,0,0,0.28));
+  }
+
+  .media-frame:hover .carousel-item.active img,
+  .news-card:hover .news-image img {
+    transform: scale(1.04);
+  }
+</style>
+<style>
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(214, 230, 245, 0.72) rgba(255, 255, 255, 0.05);
+  }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(240, 244, 248, 0.9), rgba(198, 164, 104, 0.95));
+    border-radius: 999px;
+    border: 3px solid rgba(8, 12, 18, 0.85);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(214, 190, 144, 0.98));
+  }
+</style>
+<style>
+  .hero-section::before,
+  .section-shell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hero-section::before {
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.018), transparent 18%, transparent 82%, rgba(255,255,255,0.015)),
+      radial-gradient(circle at 72% 24%, rgba(255,255,255,0.055), transparent 18%);
+    opacity: 0.9;
+  }
+
+  .section-shell::after {
+    background: linear-gradient(180deg, rgba(255,255,255,0.014), transparent 16%, transparent 84%, rgba(255,255,255,0.01));
+  }
+
+  .hero-title {
+    text-wrap: balance;
+  }
+
+  .hero-subtitle,
+  .section-intro,
+  .hero-note,
+  .feature-card p,
+  .server-card p,
+  .newbie-card p,
+  .news-text {
+    text-wrap: pretty;
+  }
+
+  .hero-surface,
+  .monitoring-card,
+  .feature-card,
+  .server-card,
+  .newbie-card,
+  .news-card,
+  .media-frame,
+  .server-showcase,
+  .hero-panel,
+  .helper-card,
+  .download-card,
+  .help-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-surface::after,
+  .monitoring-card::after,
+  .feature-card::after,
+  .server-card::after,
+  .newbie-card::after,
+  .news-card::after,
+  .media-frame::after,
+  .server-showcase::after,
+  .hero-panel::after,
+  .helper-card::after,
+  .download-card::after,
+  .help-card::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.03);
+    pointer-events: none;
+  }
+
+  .hero-surface::before,
+  .hero-panel::before,
+  .server-showcase::before {
+    filter: blur(0.2px);
+  }
+
+  .btn-ukraine,
+  .btn-step-primary,
+  .btn-step-secondary,
+  .btn-ghost-panel,
+  .btn-warning,
+  .btn-outline-warning,
+  .btn-outline-danger,
+  .btn-outline-success,
+  .btn-primary,
+  .btn-secondary {
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      0 16px 34px rgba(0,0,0,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.12) !important;
+  }
+
+  .btn-ukraine::after,
+  .btn-step-primary::after,
+  .btn-step-secondary::after,
+  .btn-ghost-panel::after,
+  .btn-warning::after,
+  .btn-outline-warning::after,
+  .btn-outline-danger::after,
+  .btn-outline-success::after,
+  .btn-primary::after,
+  .btn-secondary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 24%, rgba(255,255,255,0.18) 50%, transparent 76%);
+    transform: translateX(-120%);
+    transition: transform 0.85s ease;
+    pointer-events: none;
+  }
+
+  .btn-ukraine:hover::after,
+  .btn-step-primary:hover::after,
+  .btn-step-secondary:hover::after,
+  .btn-ghost-panel:hover::after,
+  .btn-warning:hover::after,
+  .btn-outline-warning:hover::after,
+  .btn-outline-danger:hover::after,
+  .btn-outline-success:hover::after,
+  .btn-primary:hover::after,
+  .btn-secondary:hover::after {
+    transform: translateX(120%);
+  }
+
+  .character-image,
+  .news-image img,
+  .carousel-item img {
+    transition: transform 0.9s ease, filter 0.9s ease;
+  }
+
+  .hero-visual-wrap:hover .character-image {
+    transform: translateY(-10px) scale(1.02);
+    filter: drop-shadow(0 32px 50px rgba(0,0,0,0.28));
+  }
+
+  .media-frame:hover .carousel-item.active img,
+  .news-card:hover .news-image img {
+    transform: scale(1.04);
+  }
+
+  .feature-card,
+  .server-card,
+  .newbie-card,
+  .news-card,
+  .download-card,
+  .help-card {
+    transform-origin: center bottom;
+  }
+</style>
+<style>
+  .requirements-cta {
+    display: none !important;
+  }
+
+  .system-modal .modal-body {
+    padding: 1.4rem;
+  }
+
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .navbar-brand {
+    flex-shrink: 0;
+    margin-right: 0;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .nav-primary,
+  .navbar-nav {
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link,
+  #langDropdown,
+  .nav-cta {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 16px;
+  }
+
+  .navbar-nav .nav-link {
+    gap: 8px;
+    padding: 0.8rem 1rem !important;
+  }
+
+  #langDropdown {
+    min-width: 170px;
+    justify-content: center;
+  }
+
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .nav-cta {
+    padding: 0.8rem 1.08rem;
+    border-radius: 18px !important;
+  }
+
+  .nav-cta i,
+  .navbar-nav .nav-link i {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(8, 14, 24, 0.98), rgba(10, 18, 30, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 46px rgba(0, 0, 0, 0.34);
+      align-items: stretch;
+      gap: 14px;
+    }
+
+    .nav-primary,
+    .navbar-nav {
+      width: 100%;
+      align-items: stretch;
+      gap: 8px;
+    }
+
+    .navbar-nav .nav-item {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link,
+    #langDropdown {
+      width: 100%;
+      justify-content: flex-start;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .navbar-actions {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .navbar-actions .nav-cta {
+      width: 100%;
+    }
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark py-2 shadow-sm fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+<img alt="GTAINE Logo" class="rounded-3 shadow-sm brand-logo" src="public/main/assets/images/icons/favicon-removebg-preview777.png"/>
+<span class="brand-copy">
+<strong class="text-white">GTAINE</strong>
+<span>ukrainian role play</span>
+</span>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto text-center nav-primary">
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav_home" href="#top"><i class="bi bi-house-door me-1"></i>Головна</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav_news" href="#news"><i class="bi bi-heart me-1"></i>Новини</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav_play" href="#start-game"><i class="bi bi-controller me-1"></i>Почати грати</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav_community" href="https://discord.gg/yQYzS6yn8" target="_blank"><i class="bi bi-link-45deg me-1"></i>Спільнота</a>
+</li>
+<!-- Wiki / Discord кнопка -->
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#discordWikiModal" data-bs-toggle="modal" data-i18n="nav_wiki" href="#">
+<i class="bi bi-discord me-1"></i>
+            Wiki / Discord          </a>
+</li>
+<!-- Language Selector -->
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" href="#" id="langDropdown" role="button">
+<img alt="Language" height="15" id="langIcon" src="public/main/assets/images/icons/uk.svg" width="20"/>
+<span id="langLabel">Українська</span>
+</a>
+<ul aria-labelledby="langDropdown" class="dropdown-menu dropdown-menu-dark" id="langMenu">
+<li>
+<a class="dropdown-item d-flex align-items-center gap-2 language-selector" data-label="Українська" data-lang="uk" data-flag="public/main/assets/images/icons/uk.svg" href="#">
+<img alt="UA" height="15" src="public/main/assets/images/icons/uk.svg" width="20"/> Українська
+              </a>
+</li>
+<li>
+<a class="dropdown-item d-flex align-items-center gap-2 language-selector" data-label="English" data-lang="en" data-flag="public/main/assets/images/icons/en.svg" href="#">
+<img alt="EN" height="15" src="public/main/assets/images/icons/en.svg" width="20"/> English
+              </a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="navbar-actions">
+<a class="btn btn-outline-warning fw-semibold nav-cta nav-cta-secondary" data-i18n="nav_donate" href="donate/index.html">
+<i class="bi bi-cart2"></i> Донат        </a>
+<a class="btn btn-warning fw-semibold nav-cta" data-i18n="nav_profile" href="profile/index.html">
+<i class="bi bi-person"></i> Кабінет          </a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Discord / Wiki Modal -->
+<div aria-hidden="true" aria-labelledby="discordWikiModalLabel" class="modal fade" id="discordWikiModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content bg-dark text-light border border-warning border-opacity-50 rounded-4 shadow-lg">
+<div class="modal-header border-0">
+<h5 class="modal-title d-flex align-items-center gap-2" data-i18n="discord_title" id="discordWikiModalLabel">
+<i class="bi bi-discord fs-4 text-primary"></i>
+<span>Наш Discord</span>
+</h5>
+<button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="mb-2" data-i18n="discord_body">
+          Вся актуальна Wiki, гіди, FAQ та допомога знаходяться у нашому Discord-сервері.        </p>
+<p class="small text-muted mb-0" data-i18n="discord_hint">
+          Приєднуйся, щоб отримати доступ до гайдів, оновлень та підтримки від спільноти.        </p>
+</div>
+<div class="modal-footer border-0 d-flex flex-column gap-2">
+<a class="btn btn-warning fw-semibold w-100" data-i18n="discord_button" href="https://discord.gg/yQYzS6yn8" target="_blank">
+<i class="bi bi-box-arrow-up-right me-1"></i>
+          Перейти в Discord        </a>
+<button class="btn btn-outline-light w-100" data-bs-dismiss="modal" data-i18n="close" type="button">
+          Закрити        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const translations = {
+        uk: {
+            nav_home: '<i class="bi bi-house-door me-1"></i>Головна',
+            nav_news: '<i class="bi bi-heart me-1"></i>Новини',
+            nav_play: '<i class="bi bi-controller me-1"></i>Почати грати',
+            nav_community: '<i class="bi bi-link-45deg me-1"></i>Спільнота',
+            nav_wiki: '<i class="bi bi-discord me-1"></i>Wiki / Discord',
+            nav_donate: '<i class="bi bi-cart2"></i> Донат',
+            nav_profile: '<i class="bi bi-person"></i> Кабінет',
+            discord_title: '<i class="bi bi-discord fs-4 text-primary"></i><span>Наш Discord</span>',
+            discord_body: 'Вся актуальна Wiki, гіди, FAQ та допомога знаходяться у нашому Discord-сервері.',
+            discord_hint: 'Приєднуйся, щоб отримати доступ до гайдів, оновлень та підтримки від спільноти.',
+            discord_button: '<i class="bi bi-box-arrow-up-right me-1"></i> Перейти в Discord',
+            close: 'Закрити',
+            hero_kicker: '<i class="bi bi-stars"></i> GTAINE ROLE PLAY',
+            hero_title: 'Відчуй справжню <br><span class="text-underline">атмосферу України</span>',
+            hero_subtitle: 'GTAINE - це не просто гра, це <strong>життя</strong> у цифровій реальності України з неймовірною деталізацією, справжніми емоціями та можливістю стати частиною чогось більшого!',
+            hero_cta_primary: '<i class="bi bi-download me-2"></i> Почати грати',
+            hero_cta_secondary: '<i class="bi bi-stars"></i> Як встановити',
+            hero_note: '<strong>Український світ, знайомий з першого погляду.</strong> Живий міський вайб, впізнавані локації, сильний візуал і нормальний вхід у гру без колгоспу.',
+            server_title: 'Сервер <span class="text-underline">GTAINE</span>',
+            features_title: 'Наші <span class="text-underline">переваги</span>',
+            start_title: '<i class="bi bi-controller me-3"></i>Як почати грати?',
+            step_1_title: 'Завантажити лаунчер',
+            step_1_button: '<i class="bi bi-download"></i> Завантажити через сторінку',
+            step_2_title: 'Встановити гру',
+            step_2_button: '<i class="bi bi-youtube me-2"></i>Дивитись гайд',
+            step_3_title: 'Почати гру',
+            step_3_button: '<i class="bi bi-pc-display me-2"></i>Системні вимоги',
+            newbie_title: 'Новачкам',
+            about_title: 'Про нас',
+            requirements_title: 'Системні вимоги',
+            requirements_kicker: '<i class="bi bi-cpu"></i> GTAINE Launcher Ready',
+            requirements_intro: 'Щоб гра запускалась стабільно, перевір систему перед встановленням. Якщо все ок, переходь на сторінку завантаження і став лаунчер через офіційний сценарій.',
+            requirements_min_title: '<i class="bi bi-shield-check"></i> Мінімальні вимоги',
+            requirements_rec_title: '<i class="bi bi-stars"></i> Рекомендовані вимоги',
+            requirements_cta_title: 'Хочеш поставити все без зайвих кроків?',
+            requirements_cta_copy: 'Найчистіший сценарій для старту: відкрити окрему сторінку завантаження, взяти лаунчер і пройти встановлення без ручної метушні.',
+            requirements_cta_button: '<i class="bi bi-download me-2"></i>Завантажити через сторінку',
+            requirements_cta_client: '<i class="bi bi-hdd-stack me-2"></i>Відкрити клієнт'
+        },
+        en: {
+            nav_home: '<i class="bi bi-house-door me-1"></i>Home',
+            nav_news: '<i class="bi bi-heart me-1"></i>News',
+            nav_play: '<i class="bi bi-controller me-1"></i>Start Playing',
+            nav_community: '<i class="bi bi-link-45deg me-1"></i>Community',
+            nav_wiki: '<i class="bi bi-discord me-1"></i>Wiki / Discord',
+            nav_donate: '<i class="bi bi-cart2"></i> Donate',
+            nav_profile: '<i class="bi bi-person"></i> Account',
+            discord_title: '<i class="bi bi-discord fs-4 text-primary"></i><span>Our Discord</span>',
+            discord_body: 'All current wiki pages, guides, FAQ and support are collected in our Discord server.',
+            discord_hint: 'Join to get access to guides, updates and community support.',
+            discord_button: '<i class="bi bi-box-arrow-up-right me-1"></i> Open Discord',
+            close: 'Close',
+            hero_kicker: '<i class="bi bi-stars"></i> GTAINE ROLE PLAY',
+            hero_title: 'Feel the real <br><span class="text-underline">atmosphere of Ukraine</span>',
+            hero_subtitle: 'GTAINE is not just a game, it is <strong>life</strong> inside a digital version of Ukraine with strong detail, real emotions and a world worth joining.',
+            hero_cta_primary: '<i class="bi bi-download me-2"></i> Start Playing',
+            hero_cta_secondary: '<i class="bi bi-stars"></i> Installation',
+            hero_note: '<strong>A Ukrainian world you recognize instantly.</strong> City mood, familiar locations, strong visuals and a clean path into the game.',
+            server_title: 'Server <span class="text-underline">GTAINE</span>',
+            features_title: 'Why <span class="text-underline">GTAINE</span>',
+            start_title: '<i class="bi bi-controller me-3"></i>How to start playing?',
+            step_1_title: 'Download the launcher',
+            step_1_button: '<i class="bi bi-download"></i> Download via page',
+            step_2_title: 'Install the game',
+            step_2_button: '<i class="bi bi-youtube me-2"></i>Watch guide',
+            step_3_title: 'Launch the game',
+            step_3_button: '<i class="bi bi-pc-display me-2"></i>System requirements',
+            newbie_title: 'For New Players',
+            about_title: 'About Us',
+            requirements_title: 'System Requirements',
+            requirements_kicker: '<i class="bi bi-cpu"></i> GTAINE Launcher Ready',
+            requirements_intro: 'Check your PC before installation to keep the game stable. If everything looks good, open the download page and install the launcher through the official flow.',
+            requirements_min_title: '<i class="bi bi-shield-check"></i> Minimum requirements',
+            requirements_rec_title: '<i class="bi bi-stars"></i> Recommended requirements',
+            requirements_cta_title: 'Want the cleanest install flow?',
+            requirements_cta_copy: 'The easiest start is to open the dedicated download page, grab the launcher and go through installation without manual hassle.',
+            requirements_cta_button: '<i class="bi bi-download me-2"></i>Download via page',
+            requirements_cta_client: '<i class="bi bi-hdd-stack me-2"></i>Open client'
+        }
+    };
+
+    const langMeta = {
+        uk: { label: 'Українська', flag: 'public/main/assets/images/icons/uk.svg' },
+        en: { label: 'English', flag: 'public/main/assets/images/icons/en.svg' }
+    };
+
+    function setContent(el, value) {
+        if (!el || !value) return;
+        el.innerHTML = value;
+    }
+
+    function applyLanguage(lang) {
+        const currentLang = translations[lang] ? lang : 'uk';
+        localStorage.setItem('site_lang', currentLang);
+        document.cookie = 'site_lang=' + currentLang + '; path=/; max-age=31536000';
+        document.documentElement.lang = currentLang;
+
+        const currentMeta = langMeta[currentLang];
+        const langLabel = document.getElementById('langLabel');
+        const langIcon = document.getElementById('langIcon');
+        if (langLabel) langLabel.textContent = currentMeta.label;
+        if (langIcon) langIcon.src = currentMeta.flag;
+
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            const key = el.getAttribute('data-i18n');
+            if (translations[currentLang][key]) {
+                setContent(el, translations[currentLang][key]);
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+            const key = el.getAttribute('data-i18n-html');
+            if (translations[currentLang][key]) {
+                el.innerHTML = translations[currentLang][key];
+            }
+        });
+
+        document.querySelectorAll('.language-selector').forEach(function(item) {
+            item.classList.toggle('active', item.getAttribute('data-lang') === currentLang);
+        });
+    }
+
+    document.querySelectorAll('.language-selector').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            applyLanguage(this.getAttribute('data-lang'));
+        });
+    });
+
+    applyLanguage(localStorage.getItem('site_lang') || 'uk');
+});
+</script>
+<!-- Hero Section -->
+<section class="hero-section" id="top">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 hero-content animate__animated animate__fadeInLeft">
+<div class="hero-surface">
+<div class="hero-kicker" data-i18n="hero_kicker"><i class="bi bi-stars"></i> GTAINE ROLE PLAY</div>
+<h1 class="hero-title mb-4 flicker-animation" data-i18n-html="hero_title">Відчуй справжню <br/><span class="text-underline">атмосферу України</span></h1>
+<p class="hero-subtitle mb-5" data-i18n="hero_subtitle">
+                         GTAINE - це не просто гра, це <strong>життя</strong> у цифровій реальності України з неймовірною деталізацією, 
+                        справжніми емоціями та можливістю стати частиною чогось більшого!
+                    </p>
+<div class="hero-actions">
+<a class="btn btn-ukraine btn-hero-primary animate__animated animate__pulse animate__infinite glow-animation" data-i18n="hero_cta_primary" href="view/main/download.html">
+<i class="bi bi-download me-2"></i> Почати грати
+                        </a>
+<a class="btn-ghost-panel" data-i18n="hero_cta_secondary" href="#start-game">
+<i class="bi bi-stars"></i> Як встановити
+                        </a>
+</div>
+<div class="hero-note" data-i18n="hero_note">
+<strong>Український світ, знайомий з першого погляду.</strong> Живий міський вайб, впізнавані локації, сильний візуал і нормальний вхід у гру без колгоспу.
+</div>
+<div class="server-badges mt-4">
+<span><i class="bi bi-broadcast-pin"></i> GTAINE [#01]</span>
+<span><i class="bi bi-discord"></i> Жива спільнота</span>
+<span><i class="bi bi-download"></i> Вхід через лаунчер</span>
+</div>
+</div>
+<!-- Server Monitoring -->
+<div class="monitoring-card animate__animated animate__fadeInUp">
+<div class="d-flex align-items-center">
+<div class="rank-number">1</div>
+<div class="flex-grow-1">
+<div class="region-title">GTAINE [#01] </div>
+<div class="d-flex align-items-center">
+<div class="progress-bar">
+<div class="progress-bar-fill" id="progressFill" style="width: 1%;"></div>
+</div>
+<div class="online-count">
+<span class="green-dot"></span>
+<span id="currentOnline">0</span>/
+                                        <span id="maxOnline">1000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeInRight hero-visual-wrap">
+<img alt="Персонаж" class="character-image" src="public/main/assets/images/other/pers-5.png"/>
+<div class="position-absolute" style="bottom: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0,87,183,0.3) 0%, rgba(0,0,0,0) 70%); z-index: -1;"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-5 position-relative section-shell" id="server">
+<div class="container py-5">
+<h2 class="section-title text-center mb-5 animate__animated animate__fadeIn" data-i18n-html="server_title">Сервер <span class="text-underline">GTAINE</span></h2>
+<p class="section-intro">
+            Усі основні точки входу зібрані в одному місці: сервер, спільнота, завантаження й старт для нових гравців.
+        </p>
+<div class="server-layout">
+<article class="server-showcase">
+<div class="server-showcase-topline"><i class="bi bi-broadcast-pin"></i> Основний сервер</div>
+<h3>GTAINE [#01]</h3>
+<p>Сервер поданий без зайвого технічного шуму: головний акцент на атмосфері, вході через лаунчер і нормальному шляху для нових гравців. Усе, що потрібно для старту, вже зібране на сайті та в Discord.</p>
+<div class="server-badges">
+<span><i class="bi bi-controller"></i> Вхід через лаунчер</span>
+<span><i class="bi bi-people-fill"></i> Українська RP-спільнота</span>
+<span><i class="bi bi-lightning-charge"></i> Швидкий старт</span>
+<span><i class="bi bi-newspaper"></i> Новини проєкту</span>
+</div>
+</article>
+<div class="server-grid">
+<article class="server-card">
+<div class="server-topline"><i class="bi bi-discord"></i> Спільнота</div>
+<h3>Discord та допомога</h3>
+<p>Уся жива комунікація, відповіді на питання, підтримка новачків, новини та гайди зібрані в одному Discord-сервері.</p>
+<div class="server-meta">
+<span><i class="bi bi-megaphone"></i> Новини</span>
+<span><i class="bi bi-life-preserver"></i> Допомога</span>
+</div>
+</article>
+<article class="server-card">
+<div class="server-topline"><i class="bi bi-download"></i> Завантаження</div>
+<h3>Лаунчер GTAINE</h3>
+<p>Найпростіший спосіб почати гру. На сторінці завантаження зібрані лаунчер, підказки для старту і запасні варіанти, якщо щось не спрацювало.</p>
+<div class="server-meta">
+<span><i class="bi bi-file-earmark-arrow-down"></i> Окрема сторінка</span>
+<span><i class="bi bi-shield-check"></i> Прямий старт</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-5 position-relative section-shell" id="features" style="overflow: hidden;">
+<div class="container py-5 position-relative">
+<!-- Декоративні елементи -->
+<div class="position-absolute" style="top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, rgba(0,0,0,0) 70%); z-index: -1;"></div>
+<div class="position-absolute" style="bottom: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,87,183,0.1) 0%, rgba(0,0,0,0) 70%); z-index: -1;"></div>
+<h2 class="section-title text-center mb-5 animate__animated animate__fadeIn" data-i18n-html="features_title">Наші <span class="text-underline">переваги</span></h2>
+<p class="section-intro">
+            GTAINE побудований навколо відчуття живої України: знайомі міста, брендований міський простір, транспорт, професії та сценарії, які відчуваються ближчими, ніж у звичайному RP.
+        </p>
+<div class="row g-4">
+<div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+<div class="feature-card">
+<div class="feature-number">01</div>
+<h3 class="text-white mb-4">Автентична Україна</h3>
+<p class="text-white-50 mb-4">
+                            Відтворені з неймовірною точністю міста України: від вулиць Києва до промислових зон Дніпра. 
+                            Кожен будинок, кожна вивіска - це частина нашої культури. Навіть АТБ та Нова Пошта на своїх місцях!
+                        </p>
+<img alt="Українська мапа" class="img-fluid mt-3 rounded-lg shadow-lg" src="public/main/assets/images/preview/01.png" style="border: 1px solid rgba(255,215,0,0.2);"/>
+</div>
+</div>
+<div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+<div class="feature-card">
+<div class="feature-number">02</div>
+<h3 class="text-white mb-4">Реальні професії</h3>
+<p class="text-white-50 mb-4">
+                            Поринь у справжнє українське життя: стань водієм маршрутки, поліцейським, лікарем або навіть військовим. 
+                            Ми відтворили понад 50 професій з усіма нюансами - від оформлення документів до реальних викликів.
+                        </p>
+<img alt="Реальні професії" class="img-fluid mt-3 rounded-lg shadow-lg" src="public/main/assets/images/preview/02.png" style="border: 1px solid rgba(255,215,0,0.2);"/>
+</div>
+</div>
+<div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+<div class="feature-card">
+<div class="feature-number">03</div>
+<h3 class="text-white mb-4">Автопарк</h3>
+<p class="text-white-50 mb-4">
+                            Від старих добрих ЗАЗів до сучасних європейських авто - у нас понад 500 моделей. 
+                            Кожен автомобіль можна не просто купити, а й повністю переробити: від кольору до технічних характеристик.
+                        </p>
+<img alt="Автомобілі" class="img-fluid mt-3 rounded-lg shadow-lg" src="public/main/assets/images/preview/03.png" style="border: 1px solid rgba(255,215,0,0.2);"/>
+</div>
+</div>
+<div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+<div class="feature-card">
+<div class="feature-number">04</div>
+<h3 class="text-white mb-4">Допомога ЗСУ</h3>
+<p class="text-white-50 mb-4">
+                            Ми не просто гра - ми спільнота, яка підтримує Україну. 50% від усіх донатів йде на ЗСУ. 
+                            Вже передано понад 500,000 грн на потреби армії. Граючи у нас, ти робиш внесок у перемогу!
+                        </p>
+<img alt="Допомога ЗСУ" class="img-fluid mt-3 rounded-lg shadow-lg" src="public/main/assets/images/preview/04.png" style="border: 1px solid rgba(255,215,0,0.2);"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Start Game Section -->
+<section class="py-5 position-relative section-shell" id="start-game">
+<div class="floating-particles"></div>
+<div class="container py-5">
+<h2 class="section-title text-center mb-5 animate__animated animate__fadeIn" data-i18n="start_title">
+<i class="bi bi-controller me-3"></i>Як почати грати?
+        </h2>
+<p class="section-intro">
+            Усе просто: завантажуєш лаунчер, ставиш гру і заходиш на сервер. Без зайвої метушні та перевантажених підказок.
+        </p>
+<div class="row g-4">
+<div class="col-md-4 animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+<div class="feature-card h-100 start-card start-card-premium d-flex flex-column">
+<div class="feature-number">1</div>
+<div class="step-label step-label-min"><i class="bi bi-download"></i> Лаунчер</div>
+<div class="start-icon">
+<i class="bi bi-cloud-download-fill text-warning" style="font-size: 3rem;"></i>
+</div>
+<h3 class="step-title" data-i18n="step_1_title">Завантажити лаунчер</h3>
+<p class="step-text">
+                        Натисніть кнопку нижче, щоб завантажити офіційний лаунчер гри. 
+                        Файл має розширення .exe та розмір приблизно 1.5MB.
+                    </p>
+<div class="step-meta">
+<span><i class="bi bi-file-earmark-arrow-down"></i> `.exe` файл</span>
+<span><i class="bi bi-clock-history"></i> 1-2 хвилини</span>
+</div>
+<div class="step-action">
+<a class="btn btn-step-primary" data-i18n="step_1_button" href="view/main/download.html#launcher">
+<i class="bi bi-download"></i> Завантажити через сторінку
+                        </a>
+<div class="download-helper">
+                        Якщо браузер раніше відкривав файл як набір символів, тепер завантаження йде через окрему сторінку з коректною кнопкою.
+                    </div>
+</div>
+</div>
+</div>
+<div class="col-md-4 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+<div class="feature-card h-100 start-card start-card-premium d-flex flex-column">
+<div class="feature-number">2</div>
+<div class="step-label step-label-min"><i class="bi bi-gear-fill"></i> Встановлення</div>
+<div class="start-icon">
+<i class="bi bi-gear-fill text-warning" style="font-size: 3rem;"></i>
+</div>
+<h3 class="step-title" data-i18n="step_2_title">Встановити гру</h3>
+<p class="step-text">
+                        Запустіть лаунчер та дотримуйтесь інструкцій. 
+                        Гра автоматично завантажить всі необхідні файли (близько 6.5GB).
+                    </p>
+<div class="step-meta">
+<span><i class="bi bi-hdd-network"></i> ~6.5 GB</span>
+<span><i class="bi bi-arrow-repeat"></i> Автооновлення</span>
+</div>
+<div class="step-action">
+<a class="btn btn-step-secondary" data-bs-target="#discordWikiModal" data-bs-toggle="modal" data-i18n="step_2_button" href="#">
+<i class="bi bi-youtube me-2"></i>Дивитись гайд
+                        </a>
+</div>
+</div>
+</div>
+<div class="col-md-4 animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+<div class="feature-card h-100 start-card start-card-premium d-flex flex-column">
+<div class="feature-number">3</div>
+<div class="step-label step-label-min"><i class="bi bi-controller"></i> Вхід у гру</div>
+<div class="start-icon">
+<i class="bi bi-play-fill text-warning" style="font-size: 3rem;"></i>
+</div>
+<h3 class="step-title" data-i18n="step_3_title">Почати гру</h3>
+<p class="step-text">
+                        Після встановлення оберіть сервер та натисніть "Грати". 
+                        Насолоджуйтесь українським рольплеєм!
+                    </p>
+<div class="step-meta">
+<span><i class="bi bi-pc-display"></i> Windows x64</span>
+<span><i class="bi bi-people-fill"></i> RP-спільнота</span>
+</div>
+<div class="step-action">
+<a class="btn btn-step-secondary" data-bs-target="#systemRequirementsModal" data-bs-toggle="modal" data-i18n="step_3_button" href="#">
+<i class="bi bi-pc-display me-2"></i>Системні вимоги
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-5 position-relative section-shell" id="newbie">
+<div class="container py-5">
+<h2 class="section-title text-center mb-5 animate__animated animate__fadeIn" data-i18n="newbie_title">Новачкам</h2>
+<p class="section-intro">
+            Якщо ти заходиш на GTAINE вперше, ось найкоротший маршрут без зайвих пошуків і плутанини.
+        </p>
+<div class="newbie-grid">
+<article class="newbie-card">
+<div class="newbie-topline"><i class="bi bi-rocket-takeoff"></i> Початок</div>
+<h3>З чого стартувати</h3>
+<p>Відкрий сторінку завантаження, скачай лаунчер і встанови гру. Це найпростіший і найчистіший сценарій входу без ручного збирання.</p>
+<div class="newbie-meta">
+<span><i class="bi bi-download"></i> Лаунчер</span>
+<span><i class="bi bi-arrow-right"></i> Без ручної збірки</span>
+</div>
+</article>
+<article class="newbie-card">
+<div class="newbie-topline"><i class="bi bi-question-circle"></i> Якщо щось пішло не так</div>
+<h3>Куди звертатись</h3>
+<p>Не качається файл, не запускається лаунчер, не ясно що робити далі? Найшвидше рішення зазвичай є в Discord або на сторінці завантаження.</p>
+<div class="newbie-meta">
+<span><i class="bi bi-discord"></i> Discord</span>
+<span><i class="bi bi-life-preserver"></i> Підтримка</span>
+</div>
+</article>
+<article class="newbie-card">
+<div class="newbie-topline"><i class="bi bi-compass"></i> Перші кроки</div>
+<h3>Що відкрити далі</h3>
+<p>Після встановлення дивись системні вимоги, новини проєкту і заходь у спільноту, щоб швидше влитися в серверний вайб GTAINE.</p>
+<div class="newbie-meta">
+<span><i class="bi bi-newspaper"></i> Новини</span>
+<span><i class="bi bi-controller"></i> Сервер</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Screenshots Section -->
+<section class="py-5 position-relative section-shell" id="about-screenshots">
+<div class="container py-5">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-5 mb-lg-0 animate__animated animate__fadeInLeft">
+<h2 class="section-title mb-4" data-i18n="about_title">Про нас</h2>
+<div class="feature-card">
+<p class="text-white-50 mb-4">
+<span class="text-warning fw-bold">GTAINE</span> - це унікальний український рольовий проект, 
+                        створений на платформі MTA. Ми поєднали атмосферу GTA V з українською 
+                        реальністю, створивши справжній віртуальний світ України.
+                    </p>
+<p class="text-white-50 mb-4">
+                        Наш проект - це не просто гра, а ціла спільнота, де ти можеш стати 
+                        частиною кримінальної, поліцейської або цивільної історії України.
+                    </p>
+<div class="pill-row">
+<div class="info-pill"><i class="bi bi-globe2"></i> Українська атмосфера</div>
+<div class="info-pill"><i class="bi bi-buildings"></i> Міський вайб і реальні локації</div>
+<div class="info-pill"><i class="bi bi-people-fill"></i> Активна спільнота</div>
+</div>
+<div class="d-flex flex-wrap gap-3">
+<a class="btn btn-outline-warning" data-bs-target="#discordWikiModal" data-bs-toggle="modal" href="#">
+<i class="bi bi-camera-reels me-2"></i>Для блогерів
+                        </a>
+<a class="btn btn-outline-danger" data-bs-target="#discordWikiModal" data-bs-toggle="modal" href="#">
+<i class="bi bi-person-badge me-2"></i>Вакансії
+                        </a>
+<a class="btn btn-outline-success" data-bs-target="#discordWikiModal" data-bs-toggle="modal" href="#">
+<i class="bi bi-headset me-2"></i>Підтримка
+                        </a>
+</div>
+</div>
+</div>
+<div class="col-lg-6 animate__animated animate__fadeInRight">
+<div class="media-frame">
+<div class="carousel slide" data-bs-ride="carousel" id="gameScreenshots">
+<div class="carousel-indicators">
+<button class="active" data-bs-slide-to="0" data-bs-target="#gameScreenshots" type="button"></button>
+<button data-bs-slide-to="1" data-bs-target="#gameScreenshots" type="button"></button>
+<button data-bs-slide-to="2" data-bs-target="#gameScreenshots" type="button"></button>
+<button data-bs-slide-to="3" data-bs-target="#gameScreenshots" type="button"></button>
+<button data-bs-slide-to="4" data-bs-target="#gameScreenshots" type="button"></button>
+<button data-bs-slide-to="5" data-bs-target="#gameScreenshots" type="button"></button>
+</div>
+<div class="carousel-inner rounded-3 overflow-hidden shadow-lg">
+<div class="carousel-item active">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/01.png"/>
+</div>
+<div class="carousel-item">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/02.png"/>
+</div>
+<div class="carousel-item">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/03.png"/>
+</div>
+<div class="carousel-item">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/04.png"/>
+</div>
+<div class="carousel-item">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/05.png"/>
+</div>
+<div class="carousel-item">
+<img alt="Скріншот гри" class="d-block w-100" src="public/main/assets/images/screenshots/06.png"/>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#gameScreenshots" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#gameScreenshots" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Модальне вікно системних вимог -->
+<div aria-hidden="true" class="modal fade system-modal" id="systemRequirementsModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header border-bottom border-secondary">
+<h5 class="modal-title" data-i18n="requirements_title">Системні вимоги</h5>
+<button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="requirements-hero">
+<div class="requirements-kicker" data-i18n="requirements_kicker"><i class="bi bi-cpu"></i> GTAINE Launcher Ready</div>
+<p class="requirements-copy" data-i18n="requirements_intro">Щоб гра запускалась стабільно, перевір систему перед встановленням. Якщо все ок, переходь на сторінку завантаження і став лаунчер через офіційний сценарій.</p>
+</div>
+<div class="row g-3">
+<div class="col-md-6">
+<div class="requirements-card">
+<h6 class="text-warning mb-3" data-i18n="requirements_min_title"><i class="bi bi-shield-check"></i> Мінімальні вимоги</h6>
+<ul class="list-unstyled requirements-list">
+<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> ОС: Windows 7 SP1 x64+</li>
+<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> CPU: Intel Core 2 Duo 2.2 GHz</li>
+<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> GPU: GTX 550 TI / Radeon HD 4800</li>
+<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> RAM: 6ГБ DDR2</li>
+<li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Місце: 20ГБ</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="requirements-card">
+<h6 class="text-warning mb-3" data-i18n="requirements_rec_title"><i class="bi bi-stars"></i> Рекомендовані вимоги</h6>
+<ul class="list-unstyled requirements-list">
+<li class="mb-2"><i class="bi bi-stars text-primary me-2"></i> ОС: Windows 10 x64</li>
+<li class="mb-2"><i class="bi bi-stars text-primary me-2"></i> CPU: Intel Core i5 3GHz</li>
+<li class="mb-2"><i class="bi bi-stars text-primary me-2"></i> GPU: GTX 1050 TI / RX 560</li>
+<li class="mb-2"><i class="bi bi-stars text-primary me-2"></i> RAM: 16ГБ DDR4</li>
+<li class="mb-2"><i class="bi bi-stars text-primary me-2"></i> Місце: 20ГБ SSD</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer border-top border-secondary">
+<button class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="close" type="button">Закрити</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+    .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-size: 60%;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .carousel-indicators button.active {
+        background-color: var(--ukraine-yellow);
+    }
+</style>
+<script>
+    // Ініціалізація каруселі з автоматичним прокручуванням
+    document.addEventListener('DOMContentLoaded', function() {
+        const myCarousel = new bootstrap.Carousel('#gameScreenshots', {
+            interval: 3000,
+            ride: 'carousel',
+            wrap: true
+        });
+        
+        // Анімації при скролі
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.animate__animated');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    const animationClass = element.classList.contains('animate__fadeInLeft') ? 'animate__fadeInLeft' : 
+                                         element.classList.contains('animate__fadeInRight') ? 'animate__fadeInRight' : 
+                                         'animate__fadeInUp';
+                    element.classList.add(animationClass);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Запустити один раз при завантаженні
+    });
+</script>
+<!-- News Section -->
+<!-- Розділ "Новини проекту" -->
+<section class="py-5 position-relative section-shell" id="news" style="background-color: #000;">
+<div class="container py-5">
+<h2 class="section-title text-center mb-5 animate__animated animate__fadeIn">
+<i class="bi bi-newspaper me-3"></i>Новини проекту
+        </h2>
+<p class="section-intro">
+            Актуальна інформація про сервер, великі зміни, покращення старту для нових гравців і все, що формує враження від GTAINE ще до входу в гру.
+        </p>
+<div class="row g-4">
+<div class="col-lg-4 col-md-6">
+<article class="news-card">
+<div class="news-image">
+<img alt="Оновлення старту" src="public/main/assets/images/screenshots/04.png"/>
+</div>
+<div class="news-content">
+<div class="news-date">Березень 2026</div>
+<h3 class="news-title">Оновлений старт для нових гравців</h3>
+<p class="news-text">Ми переробили головну сторінку і завантаження так, щоб шлях від кнопки “Почати грати” до входу на сервер став простим і зрозумілим.</p>
+<a class="news-link" href="#start-game"><span>Перейти до старту</span><i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class="news-card">
+<div class="news-image">
+<img alt="Атмосфера міста" src="public/main/assets/images/screenshots/02.png"/>
+</div>
+<div class="news-content">
+<div class="news-date">Березень 2026</div>
+<h3 class="news-title">Більше атмосфери українського міста</h3>
+<p class="news-text">Оновлений сайт краще передає відчуття проєкту: темний урбаністичний стиль, яскраві акценти та фокус на локальній українській ідентичності.</p>
+<a class="news-link" href="#about-screenshots"><span>Подивитися скріншоти</span><i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class="news-card">
+<div class="news-image">
+<img alt="Завантаження GTAINE" src="public/main/assets/images/screenshots/06.png"/>
+</div>
+<div class="news-content">
+<div class="news-date">Березень 2026</div>
+<h3 class="news-title">Швидкий запуск через лаунчер</h3>
+<p class="news-text">Тепер базовий сценарій один: відкриваєш сторінку завантаження, качаєш лаунчер, встановлюєш гру і заходиш на сервер без зайвих дій.</p>
+<a class="news-link" href="view/main/download.html"><span>Відкрити завантаження</span><i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+</div>
+</div>
+<div class="text-center mt-5">
+<a class="btn btn-ukraine" href="news/index.html">
+<i class="bi bi-arrow-right me-2"></i>Всі новини
+            </a>
+</div>
+</div>
+</section>
+<style>
+    /* Стилі для новин */
+    .news-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+        border-radius: 24px;
+        overflow: hidden;
+        transition: all 0.45s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .news-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 24px 44px rgba(0, 0, 0, 0.3);
+    }
+    
+    .news-image {
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .news-content {
+        padding: 24px;
+    }
+    
+    .news-date {
+        color: var(--ukraine-yellow);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .news-title {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    
+    .news-text {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.96rem;
+    }
+</style>
+<!-- Footer -->
+<div class="krp__IQq2FbPRW0 site-footer" style="backdrop-filter: blur(15px);">
+<div class="container rounded-2 krp__RUgmlhsGiR">
+<div class="row flex-wrap py-4 krp__lEEWA7WjbH">
+<div class="col-md-6 d-flex align-items-center justify-content-start krp__Z9jdlKw3CO">
+<div class="d-flex flex-column gap-2 krp__shoh2vdqpE">
+<div class="footer-brandline">
+<img alt="GTAINE Logo" class="rounded-3 shadow-sm footer-logo" src="public/main/assets/images/icons/favicon-removebg-preview777.png"/>
+<span class="brand-copy">
+<strong class="text-white">GTAINE</strong>
+<span>ukrainian role play</span>
+</span>
+</div>
+<h5 class="m-0 fw-normal fs-6">Всі права захищені! © 2026</h5>
+<div class="d-flex gap-2">
+<a class="p-0 text-start text-decoration-none" href="terms.html">
+                            Угода користувача
+                        </a>
+<a class="p-0 text-start text-decoration-none" href="offert.html">
+                            Договір оферти
+                        </a>
+<a class="p-0 text-start text-decoration-none" href="privacy.html">
+                            Політика персональних даних
+                        </a>
+</div>
+</div>
+</div>
+<div class="col-md-6 d-flex align-items-center justify-content-end krp__Z9jdlKw3CO">
+<div class="d-flex gap-4 footer-payments">
+<img src="public/main/assets/images/pay/01.svg">
+<img src="public/main/assets/images/pay/02.svg">
+<img src="public/main/assets/images/pay/03.svg">
+<img src="public/main/assets/images/pay/04.svg">
+</img></img></img></img></div>
+</div>
+</div>
+</div>
+</div>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="public/main/js/bootstrap.bundle.min__q_f4072e3c.js"></script>
+<script src="public/main/js/b-tooltip__q_f4072e3c.js"></script>
+<script src="public/main/js/parallax__q_f4072e3c.js"></script>
+<script src="public/main/js/particles/particles__q_f4072e3c.js"></script>
+<script src="public/main/js/particles/app__q_f4072e3c.js"></script>
+<script src="public/main/js/form__q_13ff88d2.js"></script>
+<script src="public/main/js/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+        // Покращена конфігурація частинок
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 120,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": ["#0057b7", "#ffd700", "#ffffff"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 4,
+                        "size_min": 0.3,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 200,
+                    "color": "#0057b7",
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 1000,
+                        "rotateY": 1000
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 200,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 8
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Моніторинг онлайну з покращеною логікою
+        let onlineHistory = [];
+        const maxHistory = 5;
+        
+        async function fetchOnlineData() {
+            try {
+                const response = await fetch('online.php');
+                if (!response.ok) throw new Error('Network response was not ok');
+        
+                let currentOnline = await response.text();
+                currentOnline = currentOnline.trim();
+                
+                if (currentOnline === '' || isNaN(currentOnline)) {
+                    currentOnline = '0';
+                }
+                
+                // Додаємо поточне значення в історію
+                onlineHistory.push(parseInt(currentOnline));
+                if (onlineHistory.length > maxHistory) {
+                    onlineHistory.shift();
+                }
+                
+                // Розраховуємо середнє значення для плавності
+                const averageOnline = Math.round(onlineHistory.reduce((a, b) => a + b, 0) / onlineHistory.length);
+                const maxOnline = 500;
+                const percent = Math.min((averageOnline / maxOnline) * 100, 100);
+
+                // Оновлення інтерфейсу з анімаціями
+                const onlineElement = document.getElementById('currentOnline');
+                const progressElement = document.getElementById('progressFill');
+                
+                // Анімація зміни числа
+                animateValue(onlineElement, parseInt(onlineElement.textContent), averageOnline, 1000);
+                
+                // Оновлення прогресу
+                progressElement.style.width = percent + '%';
+                
+                // Додаткові ефекти при зміні онлайну
+                if (averageOnline > parseInt(onlineElement.textContent)) {
+                    progressElement.classList.add('animate__animated', 'animate__pulse');
+                    setTimeout(() => {
+                        progressElement.classList.remove('animate__animated', 'animate__pulse');
+                    }, 1000);
+                }
+            } catch (error) {
+                console.error('Помилка при завантаженні онлайну:', error);
+            }
+        }
+
+        // Функція для анімації зміни чисел
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('currentOnline').textContent = '0';
+            fetchOnlineData();
+            
+            // Ініціалізація історії
+            for (let i = 0; i < maxHistory; i++) {
+                onlineHistory.push(0);
+            }
+        });
+
+        // Оновлення кожні 3 секунди
+        setInterval(fetchOnlineData, 3000);
+
+        // Плавна прокрутка для посилань
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Анімація при скролі
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate__animated');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    const animationClass = element.getAttribute('data-animation');
+                    if (animationClass) {
+                        element.classList.add(animationClass);
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Запуск при завантаженні сторінки
+        
+        // Додаткові ефекти для кнопок
+        const buttons = document.querySelectorAll('.btn-ukraine, .btn-outline-light');
+        buttons.forEach(button => {
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                button.style.setProperty('--x', `${x}px`);
+                button.style.setProperty('--y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
